@@ -1,17 +1,19 @@
-﻿[build-system]
+[build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
 name = "cdes-c"
 version = "0.1.0"
-description = "CDES Commerce Extension - Cannabis retail, GS1, EDI, and e-commerce SDK"
+description = "CDES Commerce Extension - GS1/EDI/Inventory data models for cannabis commerce"
 readme = "README.md"
 license = "MIT"
-authors = [{ name = "Acidni LLC", email = "support@acidni.net" }]
 requires-python = ">=3.10"
+authors = [
+    { name = "Acidni LLC", email = "support@acidni.net" }
+]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
@@ -19,20 +21,9 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
-    "httpx>=0.25.0",
-    "pydantic>=2.0.0",
-]
-
-[project.optional-dependencies]
-dev = ["pytest>=7.0.0", "pytest-asyncio>=0.21.0", "black", "ruff", "mypy"]
-shopify = ["shopify-api>=12.0.0"]
-bigcommerce = ["bigcommerce-api>=0.24.0"]
+keywords = ["cannabis", "commerce", "gs1", "edi", "inventory", "compliance"]
 
 [project.urls]
-Homepage = "https://cdes.dev"
-Documentation = "https://cdes.dev/docs/commerce"
+Homepage = "https://cdes.acidni.net"
 Repository = "https://github.com/Acidni-LLC/cdes-c-sdk-python"
-
-[tool.hatch.build.targets.wheel]
-packages = ["cdes_c"]
+Documentation = "https://cdes.acidni.net/extensions/commerce"
